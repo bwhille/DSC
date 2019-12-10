@@ -58,5 +58,5 @@ Sample_xDhcpsServerScope_NewScope -OutputPath C:\dsc_scripts
 #
 #
 # Führt die mof Dateien die für diesen Host passen / matchen aus.
-#Start-DscConfiguration -Path C:\dsc_scripts -Force -Wait -Verbose
+# Start-DscConfiguration -Path C:\dsc_scripts -Force -Wait -Verbose
 #
