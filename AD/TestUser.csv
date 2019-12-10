@@ -1,0 +1,14 @@
+﻿GivenName;Surename;Domain;Description;Company;Department;Office;AccountPassword
+Karl;Mayer;herdt.ps;Karl kuemmert sich um den Drucker;ACME;IT;Koblenz;InitPWD123
+Pater;Svenson;herdt.ps;Uebernimmt Hausmeistertätigkeiten;ACME;HM;Koblenz;InitPWD123
+Manuela;Karlson;herdt.ps;Leiter der IT;ACME;IT;Koblenz;InitPWD123
+Josef;Simpson;herdt.ps;Übernimmt Hausmeitertaetigkeiten;ACME;HM;Koblenz;InitPWD123
+Paul;Kraft;herdt.ps;-;ACME;-;Koblenz;InitPWD123
+Anna;Peterson;herdt.ps;Macht nie Ueberstunden;ACME;IT;Koblenz;InitPWD123
+Berta;Ludwig;herdt.ps;Macht ständig Ueberstunden;ACME;Produktion;Koblenz;InitPWD123
+Johana;Kraft;herdt.ps;Kraftvoll;ACME;Produktion;Koblenz;InitPWD123
+Tom;Bayer;herdt.ps;Neuling;ACME;Vertrieb;Koblenz;InitPWD123
+Markus;Fischer;herdt.ps;Verkäufer;ACME;Vertrieb;Koblenz;InitPWD123
+Marie;Miesen;herdt.ps;Chefin;ACME;Geschaeftsleitung;Koblenz;InitPWD123
+Noah;Becker;herdt.ps;Urgestein;ACME;Lager;Koblenz;InitPWD123
+Charliy;Becker;herdt.ps;Sohn vom Urgestein;ACME;Lager;Koblenz;InitPWD123

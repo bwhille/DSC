@@ -1,0 +1,1 @@
+https://sid-500.com/2017/07/09/powershell-remoting-how-to-connect-to-remote-hosts-in-a-domain-and-in-a-non-domain-environment-trusted-hosts/

@@ -1,0 +1,18 @@
+Kapitel 15: kompletter Code 
+===========================
+
+Set-ExecutionPolicy –ExecutionPolicy RemoteSigned
+Get-NetIPConfiguration –InterfaceAlias "Ethernet" -Detailed
+Get-WindowsFeature | Where-Object {$_.InstallState -eq "Installed"}
+Get-NetIPConfiguration -Detailed
+Get-DNSServerSetting oder Get-DNSServer
+Get-ADDomainController -Filter * | Select-Object -Property Name
+Get-ADOrganizationalUnit -Filter {Name -ne "Firma"} -SearchBase "OU=Firma,DC=herdt,DC=ps" | Set-ADOrganizationalUnit -ProtectedFromAccidentalDeletion:$False
+Get-ADOrganizationalUnit -Filter {Name -ne "Firma"} -SearchBase "OU=Firma,DC=herdt,DC=ps" | Set-ADOrganizationalUnit -ProtectedFromAccidentalDeletion:$False –PassThru | Remove-ADObject -Recursive -Confirm:$False
+Import-Csv .\Verwaltung-Neue-MA.csv
+Import-Csv .\Verwaltung-Neue-MA.csv –Delimiter ";"
+Import-Csv .\Verwaltung-Neue-MA.csv -UseCulture
+Import-Csv .\Verwaltung-Neue-MA.csv –UseCulture –Encoding Default
+Import-Csv .\Verwaltung-Neue-MA.csv –UseCulture –Encoding Default | New-ADUser
+Get-ADUser -Filter * -SearchBase "OU=Firma,DC=herdt,DC=ps"| Remove-ADUser
+Import-Csv .\Verwaltung-Neue-MA.csv –UseCulture –Encoding Default | New-ADUser -AccountPassword (ConvertTo-SecureString –AsPlainText "Kennw0rt!" -Force) -Enabled:$True -ChangePasswordAtLogon:$True
