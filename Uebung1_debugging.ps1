@@ -12,7 +12,7 @@ if($daten.LastBootUpTime)
     }
 else
     {
-    Write-Warning "Es besteht keine Verbindung zu $RechnerName."
+    Write-Warning "keine Verbindung zu $RechnerName."
     }
 } 
 
