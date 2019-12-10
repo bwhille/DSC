@@ -1,19 +1,23 @@
-﻿ function get-timeup {
-Param ( [String] $RechnerName = $env:COMPUTERNAME )
-$daten = Get-WmiObject Win32_OperatingSystem -ComputerName $RechnerName
-if($daten.LastBootUpTime)
+﻿configuration Sample_xDhcpsServerScope_NewScope
+{
+    Import-DscResource -module xDHCpServer
     {
-    $startzeit = $daten.ConvertToDateTime($daten.LastBootUpTime)
-    $zeitspanne = (Get-Date) - $startzeit
-
-    Write-Output ("Rechnername : $RechnerName")
-    Write-Output ("Letzter Start: " + ($startzeit).ToString("dd.MM.yyyy hh:mn:ss"))
-    Write-Output ("Läuft seit  : " + $zeitspanne.Days + "Tage " + $zeitspanne.Hours + " Stunden " + $zeitspanne.Minutes + " Minuten")
+        xDhcpServerAuthorization LocalServerActivation
+        {
+            Ensure = 'Present'
+        }
+        xDhcpServerScope Scope
+        {
+            Ensure = 'Present'
+            Name = 'PowerShellScope'
+            ScopeId = '192.168.200.0'
+            SubnetMask = '255.255.255.0'
+            IPStartRange = '192.168.200.100'
+            IPEndRange = '192.168.200.254'
+            LeaseDuration = ((New-TimeSpan -Hours 8 ).ToString())
+            State = 'Active'
+            AddressFamily = 'IPv4'
+            DependsOn = 'LocalServerActivation'
+        }
     }
-else
-    {
-    Write-Warning "Es besteht keine Verbindung zu $RechnerName."
-    }
-} 
-
-get-timeup
+}
