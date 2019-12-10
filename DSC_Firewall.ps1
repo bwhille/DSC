@@ -14,7 +14,7 @@ else {
         FirewallProfile ConfigurePrivateFirewallProfile
         {
             Name = 'Private'
-            Enabled = 'False'
+            Enabled = 'true'
 #            DefaultInboundAction = 'Block'
 #            DefaultOutboundAction = 'Allow'
 #            AllowInboundRules = 'True'
